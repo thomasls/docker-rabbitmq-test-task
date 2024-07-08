@@ -19,7 +19,7 @@ management console.
 
 Pre requisite: Python 3
 
-After installing Python 3 (latest version), just run the following command at the root of your project:
+After installing Python 3 (latest version), just run the following command at the root of this project:
 
 ```sh
 virtualenv venv
