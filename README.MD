@@ -1,4 +1,4 @@
-# Docker - RabbitMQ Producer-Consumer Sample Application
+# RabbitMQ Producer-Consumer Sample Application
 A simple Python application created as per the requirements in Python_Docker_RabbitMQ Test Task.pdf
 
 This program runs [RabbitMQ](http://rabbitmq.com/) and two small Python messages, 
