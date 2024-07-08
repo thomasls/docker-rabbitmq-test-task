@@ -1,0 +1,46 @@
+# Docker Compose description of the combined application including producer and consumer.
+#
+# 'docker-compose up' will run this.
+version: '3'  # requires Docker Compose 1.13 or later
+
+# This section describes the various containers (services).
+services:
+  
+  rabbitmq:
+    image: 'rabbitmq:3.6-management-alpine'
+
+    # These ports are exposed on the host; 'hostport:containerport'
+    ports:
+      # The standard AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+
+    # Run this container on a private network for this application.
+    networks:
+      - network
+
+  consumer:
+    # Run consumer/Dockerfile
+    build: consumer
+
+    # Environment variables:
+    environment:
+      # The location of the RabbitMQ server 
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+
+    # Again, run on the private network
+    networks:
+      - network
+
+  producer:
+    # Identical to the consumer
+    build: producer
+    environment:
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+    networks:
+      - network
+
+networks:
+  # Declare our private network
+  network: {}
