@@ -1,0 +1,9 @@
+.git*
+.azure/
+.idea/
+.cache/
+.pytest_cache/
+**/__pycache__/
+*.md
+*.yaml
+
