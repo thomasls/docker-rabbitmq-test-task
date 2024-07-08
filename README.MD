@@ -1,7 +1,7 @@
 # RabbitMQ Producer-Consumer Sample Application
 A simple Python application created as per the requirements in Python_Docker_RabbitMQ Test Task.pdf
 
-This program runs [RabbitMQ](http://rabbitmq.com/) and two small Python messages, 
+This program runs [RabbitMQ](http://rabbitmq.com/) and two small Python programs (producer and consumer), 
 all in a single Docker environment. The `producer` program publishes a message 
 into RabbitMQ every 5 seconds; the `consumer` program logs every message it recevies to
 its console.
