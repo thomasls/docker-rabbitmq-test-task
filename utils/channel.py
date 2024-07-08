@@ -1,7 +1,7 @@
 import pika, os
 
 QUE_NAME = os.environ.get('QUE_NAME', 'process_msg')
-AMQP_URL = os.environ.get('AMQP_URL', 'amqp://rabbitmq?connection_attempts=5&retry_delay=5/%2f')
+AMQP_URL = os.environ.get('AMQP_URL', 'amqp://rabbitmq?connection_attempts=5&retry_delay=5')
 
 # Get the RabbitMQ connection and channel 
 def get_channel():

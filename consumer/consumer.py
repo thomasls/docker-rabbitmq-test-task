@@ -1,6 +1,9 @@
+#
+# RabbitMQ consumer
+#
 import time
-from channel import QUE_NAME, get_channel
-from logger import get_logger
+from utils.channel import QUE_NAME, get_channel
+from utils.logger import get_logger
 
 log = get_logger()
 
@@ -27,7 +30,7 @@ def main():
   # Start consuming messages (blocks main thread)
   _channel.start_consuming()
 
-connection.close()
+  connection.close()
 
 if __name__ == '__main__':
     main()

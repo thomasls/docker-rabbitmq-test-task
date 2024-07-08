@@ -108,3 +108,33 @@
 [20:54:05] {C:\Python312\Lib\site-packages\pika\adapters\utils\io_services_utils.py:882} INFO - Closing transport socket and unlinking: state=3; <ssl.SSLSocket fd=652, family=2, type=1, proto=0, laddr=('172.16.132.6', 4188), raddr=('44.223.162.67', 5671)>
 [20:54:05] {C:\Python312\Lib\site-packages\pika\adapters\blocking_connection.py:525} INFO - User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<URLParameters host=moose.rmq.cloudamqp.com port=5671 virtual_host=xhphntuk ssl=True>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')
 [20:54:10] {C:\thomas\test-rabbitmq\consumer.py:12} INFO - Processing finished
+[23:45:25] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:45:25] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:45:33] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:45:33] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:45:41] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:45:41] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:45:49] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:45:49] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:45:56] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:45:56] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:45:56] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:746} ERROR - AMQP connection workflow failed: AMQPConnectionWorkflowFailed: 5 exceptions in all; last exception - gaierror(11001, 'getaddrinfo failed'); first exception - gaierror(11001, 'getaddrinfo failed').
+[23:45:56] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:723} ERROR - AMQPConnectionWorkflow - reporting failure: AMQPConnectionWorkflowFailed: 5 exceptions in all; last exception - gaierror(11001, 'getaddrinfo failed'); first exception - gaierror(11001, 'getaddrinfo failed')
+[23:45:56] {C:\Python312\Lib\site-packages\pika\adapters\blocking_connection.py:450} ERROR - Connection workflow failed: AMQPConnectionWorkflowFailed: 5 exceptions in all; last exception - gaierror(11001, 'getaddrinfo failed'); first exception - gaierror(11001, 'getaddrinfo failed')
+[23:45:56] {C:\Python312\Lib\site-packages\pika\adapters\blocking_connection.py:457} ERROR - Error in _create_connection().
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\pika\adapters\blocking_connection.py", line 451, in _create_connection
+    raise self._reap_last_connection_workflow_error(error)
+  File "C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py", line 565, in _resolve
+    result = socket.getaddrinfo(self._host, self._port, self._family,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[23:47:23] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:47:23] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:47:31] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:47:31] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').
+[23:49:16] {C:\Python312\Lib\site-packages\pika\adapters\utils\selector_ioloop_adapter.py:569} ERROR - Address resolution failed: gaierror(11001, 'getaddrinfo failed')
+[23:49:16] {C:\Python312\Lib\site-packages\pika\adapters\utils\connection_workflow.py:799} ERROR - getaddrinfo failed: gaierror(11001, 'getaddrinfo failed').

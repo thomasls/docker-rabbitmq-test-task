@@ -1,14 +1,13 @@
 #
-# A simple RabbitMQ producer
+# A simple RabbitMQ producer which publishes a message every 5 seconds.
 #
-# This creates an exchange named "exchange", then publishes a message every 5 seconds.
-#
+import os
 import uuid
 import json
 import datetime;
-from channel import get_channel, publish_message
 from functools import partial
-from logger import get_logger
+from utils.logger import get_logger
+from utils.channel import get_channel, publish_message
 
 # Delay between sending messages
 DELAY = os.environ.get('DELAY', '5')

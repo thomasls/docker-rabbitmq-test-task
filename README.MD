@@ -31,17 +31,16 @@ pip install -r requirements.txt
 Just run the following command at the root of your project:
 
 ```sh
-cd consumer
-python consumer.py
+export AMQP_URL=amqp://localhost
+python consumer/consumer.py
 
 ```
 ## ✨ Producer
 Just run the following command at the root of your project:
 
 ```sh
-cd producer
 export AMQP_URL=amqp://localhost
-python producer.py
+python producer/producer.py
 ```
 
 The new producer will start sending messages all of which will appear on the consumer's output.
